@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">GoogleSolutionChallenge2023</string>
+
     <string name="eye_stretching_intro">당신은 설정된 사용시간을 초과했습니다.\n  그동안 쌓인 눈의 피로를 풀어줍시다.</string>
     <string name="neck_stretching_intro">스마트폰을 보며 하루 동안 쌓인\n 목의 피로를 풀어 줄 시간입니다.</string>
-    <string name="stop">STOP</string>
+    <string name="stretching_start_stop">STOP</string>
     <string name="end_intro">수고하셨습니다!</string>
+
+    <string name="eyespin1_des">눈동자를 시계방향으로\n <b>천천히 5바퀴</b> 돌려줍시다.</string>
+    <string name="eyespin2_des">이번엔 눈동자를 반시계방향으로\n <b>천천히 5바퀴</b> 돌려줍시다.</string>
+    <string name="eyeupdown_des">눈동자를 <b>위로 올리고\n5초간</b> 멈춰줍시다.\n 그리고 <b>아래로 내리고\n 5초간</b> 멈춰줍시다.\n 이를 5회 반복합니다.</string>
+    <string name="eyeleftright_des">눈동자를 <b>왼쪽으로 돌리고\n5초간</b> 멈춰줍시다.\n 그리고 <b>오른쪽으로 돌리고\n 5초간</b> 멈춰줍시다.\n 이를 5회 반복합니다.</string>
+    <string name="eyepush_des">손가락 끝으로 눈두덩이를\n <b>3초간 눌러주고 뗍시다.</b>\n 이를 10회 반복합니다.</string>
+    <string name="eyeseefar_des">잠깐 스마트폰에서 눈을 떼고\n <b>비교적 멀리있는 사물을</b>\n 바라봅시다.</string>
+
+    <string name="neckforehead_des">깍지 낀 손을 이마에 올립시다.\n <b>손은 이마를 밀고, 이마는 손을 밀어줍시다.</b>\n 이를 6초동안 한 후, 3초 쉬며\n 10번 반복합니다.</string>
+    <string name="neckup_des">손가락을 턱 아래에 두고\n <b>턱을 지긋이 위로 밀어줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
+    <string name="neckdown_des">손가락을 똑같은 위치에 두고\n <b>턱을 지긋이 아래로 당겨줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
+    <string name="neckleftright_des"><b>왼손을 왼쪽 뺨에 두고</b>\n 6초간 밀어줍시다.\n 그 후 반대로 6초간 밀어줍시다.</string>
+
 </resources>
