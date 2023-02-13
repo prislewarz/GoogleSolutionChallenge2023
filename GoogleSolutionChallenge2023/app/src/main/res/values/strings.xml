@@ -17,5 +17,14 @@
     <string name="neckup_des">손가락을 턱 아래에 두고\n <b>턱을 지긋이 위로 밀어줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
     <string name="neckdown_des">손가락을 똑같은 위치에 두고\n <b>턱을 지긋이 아래로 당겨줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
     <string name="neckleftright_des"><b>왼손을 왼쪽 뺨에 두고</b>\n 6초간 밀어줍시다.\n 그 후 반대로 6초간 밀어줍시다.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="warning1">ddd</string>
+    <string name="warning2">ddd</string>
+    <string name="warning3">ddd</string>
+    <string name="warning4">ddd</string>
+    <string name="warning5">ddd</string>
+    <string name="warning6">ddd</string>
 
 </resources>
