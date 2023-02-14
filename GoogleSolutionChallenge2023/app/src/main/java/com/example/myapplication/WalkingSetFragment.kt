@@ -16,7 +16,11 @@ class WalkingSetFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentWalkingSetBinding.inflate(inflater, container, false)
+        binding.npker.apply {
+            maxValue = 10
+            minValue = 0
+            value = 0
+        }
         return binding.root
     }
-
 }

@@ -22,6 +22,12 @@ class NeckSetFragment : Fragment() {
             val intent = Intent(activity, NeckStretchingStart::class.java)
             startActivity(intent)
         }
+
+        binding.npker.apply {
+            maxValue = 10
+            minValue = 0
+            value = 0
+        }
         return binding.root
     }
 }

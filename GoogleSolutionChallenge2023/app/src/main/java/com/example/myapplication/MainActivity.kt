@@ -25,17 +25,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewPager() {
+        //circle indicator 설정
+        val indicator = binding.indicator
+        indicator.apply {
+            setViewPager(binding.viewPager)
+            createIndicators(4, 0)
+        }
+
         //ViewPager2 Adapter 셋팅
         var viewPager2Adatper = ViewPager2Adapter(this)
-        viewPager2Adatper.addFragment(MainFragment())
-        viewPager2Adatper.addFragment(EyeSetFragment())
-        viewPager2Adatper.addFragment(NeckSetFragment())
-        viewPager2Adatper.addFragment(WalkingSetFragment())
 
-        val indicator = binding.indicator
-        indicator.setViewPager(binding.viewPager)
-        indicator.createIndicators(4, 0)
-
+        viewPager2Adatper.apply {
+            addFragment(MainFragment())
+            addFragment(EyeSetFragment())
+            addFragment(NeckSetFragment())
+            addFragment(WalkingSetFragment())
+        }
 
         //Adapter 연결
         binding.viewPager.apply {

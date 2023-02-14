@@ -18,11 +18,16 @@ class EyeSetFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentEyeSetBinding.inflate(inflater, container, false)
+        val numberPicker = binding.npker
+        numberPicker.apply {
+            maxValue = 10
+            minValue = 0
+            value = 0
+        }
         binding.eyeStrechingStart.setOnClickListener {
             val intent = Intent(activity, EyeStretchingStart::class.java)
             startActivity(intent)
         }
         return binding.root
     }
-
 }
