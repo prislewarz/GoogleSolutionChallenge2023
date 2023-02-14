@@ -1,6 +1,8 @@
 package com.example.myapplication
 
 import EyeSetFragment
+import MainFragment
+import NeckSetFragment
 import WalkingSetFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,10 +27,10 @@ class MainActivity : AppCompatActivity() {
     private fun initViewPager() {
         //ViewPager2 Adapter 셋팅
         var viewPager2Adatper = ViewPager2Adapter(this)
+        viewPager2Adatper.addFragment(MainFragment())
         viewPager2Adatper.addFragment(EyeSetFragment())
         viewPager2Adatper.addFragment(NeckSetFragment())
         viewPager2Adatper.addFragment(WalkingSetFragment())
-//        viewPager2Adatper.addFragment()
 
         val indicator = binding.indicator
         indicator.setViewPager(binding.viewPager)
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         //Adapter 연결
         binding.viewPager.apply {
             adapter = viewPager2Adatper
-
             registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)

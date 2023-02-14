@@ -1,15 +1,13 @@
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.myapplication.EyeStretchingStart
-import com.example.myapplication.NeckStretchingStart
 import com.example.myapplication.databinding.FragmentEyeSetBinding
+import com.example.myapplication.databinding.FragmentMainBinding
 
-class EyeSetFragment : Fragment() {
-    private var _binding: FragmentEyeSetBinding? = null
+class MainFragment : Fragment() {
+    private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,11 +15,7 @@ class EyeSetFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
-        _binding = FragmentEyeSetBinding.inflate(inflater, container, false)
-        binding.eyeStrechingStart.setOnClickListener {
-            val intent = Intent(activity, EyeStretchingStart::class.java)
-            startActivity(intent)
-        }
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
 

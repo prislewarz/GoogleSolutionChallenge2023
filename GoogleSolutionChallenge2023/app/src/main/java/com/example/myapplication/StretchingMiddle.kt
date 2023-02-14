@@ -9,7 +9,6 @@ class StretchingMiddle : AppCompatActivity() {
 
     fun page_num_check(page_num : Int): String{
         when (page_num){
-
             1 -> return getString(R.string.eyespin2_des)
             2 -> return getString(R.string.eyeupdown_des)
             3 -> return getString(R.string.eyeleftright_des)
@@ -18,7 +17,6 @@ class StretchingMiddle : AppCompatActivity() {
             7 -> return getString(R.string.neckup_des)
             8 -> return getString(R.string.neckdown_des)
             9 -> return getString(R.string.neckleftright_des)
-
         }
 
     return "ERROR"
