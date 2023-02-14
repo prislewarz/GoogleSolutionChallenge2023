@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import EyeSetFragment
+import WalkingSetFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,50 +27,35 @@ class MainActivity : AppCompatActivity() {
         var viewPager2Adatper = ViewPager2Adapter(this)
         viewPager2Adatper.addFragment(EyeSetFragment())
         viewPager2Adatper.addFragment(NeckSetFragment())
+        viewPager2Adatper.addFragment(WalkingSetFragment())
+//        viewPager2Adatper.addFragment()
+
+        val indicator = binding.indicator
+        indicator.setViewPager(binding.viewPager)
+        indicator.createIndicators(4, 0)
+
 
         //Adapter 연결
-        binding.vpViewpagerMain.apply {
+        binding.viewPager.apply {
             adapter = viewPager2Adatper
 
             registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
+                    indicator.animatePageSelected(position%4)
                 }
             })
         }
 
         //ViewPager, TabLayout 연결
-        TabLayoutMediator(binding.tlNavigationView, binding.vpViewpagerMain) { tab, position ->
+        TabLayoutMediator(binding.tlNavigationView, binding.viewPager) { tab, position ->
             Log.e("YMC", "ViewPager position: ${position}")
             when (position) {
-                0 -> tab.text = "눈"
-                1 -> tab.text = "목"
+                0 -> tab.text = "메인"
+                1 -> tab.text = "눈"
+                2 -> tab.text = "목"
+                3 -> tab.text = "스몸비"
             }
         }.attach()
     }
-}
-
-class ViewPager2Adapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
-    var fragments: ArrayList<Fragment> = ArrayList()
-
-    override fun getItemCount(): Int {
-        return fragments.size
-    }
-
-    override fun createFragment(position: Int): Fragment {
-        return fragments[position]
-    }
-
-    fun addFragment(fragment: Fragment) {
-        fragments.add(fragment)
-        notifyItemInserted(fragments.size - 1)
-        //TODO: notifyItemInserted!!
-    }
-
-    fun removeFragement() {
-        fragments.removeLast()
-        notifyItemRemoved(fragments.size)
-        //TODO: notifyItemRemoved!!
-    }
-
 }
