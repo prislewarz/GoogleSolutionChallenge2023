@@ -7,21 +7,30 @@ import WalkingSetFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-
+    var backKeyPressedTime : Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initViewPager()
+    }
+
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() > backKeyPressedTime + 2500){
+            backKeyPressedTime = System.currentTimeMillis()
+            Toast.makeText(this, "종료하려면 뒤로가기를 한 번 더 누르세요", Toast.LENGTH_SHORT).show()
+            return;
+        }
+        if(System.currentTimeMillis() <= backKeyPressedTime + 2500){
+            finishAffinity()
+        }
     }
 
     private fun initViewPager() {

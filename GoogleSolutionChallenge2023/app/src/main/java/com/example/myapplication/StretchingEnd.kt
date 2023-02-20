@@ -19,8 +19,6 @@ class StretchingEnd : AppCompatActivity() {
             val intent = Intent(this, EyeSetFragment::class.java)
             intent.putExtra("neckforehead", 0)
             startActivity(intent)
-
-            startActivity(intent)
         }
     }
 }
