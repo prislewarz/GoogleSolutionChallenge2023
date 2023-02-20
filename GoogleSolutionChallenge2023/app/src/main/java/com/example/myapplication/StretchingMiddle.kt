@@ -24,11 +24,8 @@ class StretchingMiddle : AppCompatActivity() {
             7 -> return getString(R.string.neckup_des)
             8 -> return getString(R.string.neckdown_des)
             9 -> return getString(R.string.neckleftright_des)
-
             // 1~5까지 눈 스트레칭 / 7~9까지는 목스트레칭 / 각각의 가장 처음 스트레칭 관련 코드는 아래 작성
-
         }
-
         return "ERROR"
     }
 
@@ -66,8 +63,6 @@ class StretchingMiddle : AppCompatActivity() {
 
         }
 
-
-
         binding.nextButton.setOnClickListener{
             if(page_num == 6 || page_num == 10){
                 val intent = Intent(this, StretchingEnd::class.java)
@@ -82,14 +77,8 @@ class StretchingMiddle : AppCompatActivity() {
                     runOnUiThread {
                             binding.nextButton.isVisible = true
                         }
-
                     }
-
                 }
-
-
-
         }
-
     }
 }

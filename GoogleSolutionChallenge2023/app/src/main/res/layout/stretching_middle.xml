@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".EyeStretchingStart">
-
-
     <TextView
         android:id="@+id/stretching_des"
         android:layout_width="wrap_content"
@@ -21,7 +19,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:contentDescription="next_button"
         android:id="@+id/next_button"
@@ -34,5 +31,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.723" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
