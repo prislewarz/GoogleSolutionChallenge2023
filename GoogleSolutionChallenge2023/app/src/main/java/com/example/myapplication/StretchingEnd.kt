@@ -11,10 +11,11 @@ class StretchingEnd : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.stretching_end)
-
+        binding = StretchingEndBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //StretchingMiddle:class.java를 눈 메인 화면으로 바꾸기
         //intent에 neckforehead랑 value 값 바꾸기
+
         binding.endButton.setOnClickListener{
             val intent = Intent(this, EyeSetFragment::class.java)
             intent.putExtra("neckforehead", 0)

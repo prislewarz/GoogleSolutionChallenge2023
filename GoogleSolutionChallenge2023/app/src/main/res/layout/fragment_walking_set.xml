@@ -87,6 +87,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/nanumsquareroundr"/>
     <NumberPicker
+        android:theme="@style/NumberPickerTheme"
         android:id="@+id/npker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
