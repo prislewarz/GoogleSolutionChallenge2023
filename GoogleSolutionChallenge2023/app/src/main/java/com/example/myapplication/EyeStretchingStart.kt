@@ -17,4 +17,5 @@ class EyeStretchingStart : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

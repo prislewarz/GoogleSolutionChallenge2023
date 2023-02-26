@@ -1,11 +1,11 @@
 package com.example.myapplication
 
+import android.app.ActivityManager
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-
 import com.example.myapplication.databinding.StretchingMiddleBinding
 import java.util.*
 import kotlin.concurrent.schedule
@@ -43,37 +43,41 @@ class StretchingMiddle : AppCompatActivity() {
         if(intent.hasExtra("eyespin1")){
             binding.stretchingDes.text = getString(R.string.eyespin1_des)
             page_num = 1
-            Timer().schedule(15000) {
+            Timer().schedule(5000) {
 
                 runOnUiThread {
                     binding.nextButton.isVisible = true
                 }
             }
+
 
         }//인텐드가 NeckStretchingStart에서 오면 neckforehead가 옴 => 첫번째 목 스트레칭 화면 작동, 그리고 다음 스트레칭이 나오도록 page_num을 7로 변화
         else if(intent.hasExtra("neckforehead")){
             binding.stretchingDes.text = getString(R.string.neckforehead_des)
             page_num = 7
-            Timer().schedule(15000) {
+            Timer().schedule(5000) {
 
                 runOnUiThread {
                     binding.nextButton.isVisible = true
                 }
             }
+
 
         }
 
         binding.nextButton.setOnClickListener{
             if(page_num == 6 || page_num == 10){
                 val intent = Intent(this, StretchingEnd::class.java)
+                finish()
                 startActivity(intent)
+
             }
             else{
                 binding.nextButton.isVisible = false
                 binding.stretchingDes.text = page_num_check(page_num)
                 page_num++
 
-                Timer().schedule(15000) {
+                Timer().schedule(5000) {
                     runOnUiThread {
                             binding.nextButton.isVisible = true
                         }
@@ -81,4 +85,19 @@ class StretchingMiddle : AppCompatActivity() {
                 }
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        val activityManager = applicationContext
+            .getSystemService(ACTIVITY_SERVICE) as ActivityManager
+        activityManager.moveTaskToFront(taskId, 0)
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
+
 }
+
+
+
