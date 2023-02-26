@@ -17,7 +17,7 @@ class StretchingEnd : AppCompatActivity() {
         //intent에 neckforehead랑 value 값 바꾸기
 
         binding.endButton.setOnClickListener{
-            val intent = Intent(this, EyeSetFragment::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("neckforehead", 0)
             startActivity(intent)
         }
