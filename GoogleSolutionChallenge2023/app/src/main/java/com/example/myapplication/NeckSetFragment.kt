@@ -9,8 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TimePicker
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
-import com.example.myapplication.NeckAlertReceiver
+import com.example.myapplication.AlertReceiver
+import com.example.myapplication.MainActivity
 import com.example.myapplication.NeckStretchingStart
 import com.example.myapplication.databinding.FragmentNeckSetBinding
 import java.text.DateFormat
@@ -20,7 +22,12 @@ import java.util.*
 class NeckSetFragment : Fragment() {
     private var _binding: FragmentNeckSetBinding? = null
     private val binding get() = _binding!!
+    lateinit var mainActivity: MainActivity
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mainActivity = context as MainActivity
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -50,7 +57,7 @@ class NeckSetFragment : Fragment() {
                     startAlarm(calendar)
                 }
             }
-            var builder = TimePickerDialog(binding.root.context,timeListener,hour,minute,false)
+            var builder = TimePickerDialog(mainActivity,timeListener,hour,minute,false)
             builder.show()
         }
 
@@ -66,19 +73,25 @@ class NeckSetFragment : Fragment() {
     }
 
     private fun startAlarm(calendar: Calendar){
-        var alarmManager : AlarmManager = binding.root.context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        var alarmManager : AlarmManager = mainActivity.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-        var intent = Intent(binding.root.context, NeckAlertReceiver::class.java)
+        var intent = Intent(mainActivity, AlertReceiver::class.java)
         var curTime = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.time)
         intent.putExtra("time", curTime)
 
-        var pendingIntent = PendingIntent.getBroadcast(binding.root.context, 1, intent, 0 )
+        var pendingIntent = PendingIntent.getBroadcast(mainActivity, 1, intent, 0 )
 
         if(calendar.before(Calendar.getInstance())){
             calendar.add(Calendar.DATE, 1)
         }
 
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
-        Log.d("Mytag","확인1")
+        if(binding.isEverydaycb.isChecked){
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY ,pendingIntent)
+
+        }
+        else{
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
+        }
+
     }
 }

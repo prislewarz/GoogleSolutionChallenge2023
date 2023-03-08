@@ -33,7 +33,7 @@
 
                 <TextView
                     android:layout_width="361dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="215dp"
                     android:layout_gravity="center"
                     android:text="@string/eye_warning" />
 
