@@ -1,4 +1,5 @@
 import android.Manifest
+import android.content.Context.SENSOR_SERVICE
 import android.content.pm.PackageManager
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -9,7 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.NumberPicker
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.FragmentEyeSetBinding
 import com.example.myapplication.databinding.FragmentWalkingSetBinding
@@ -20,6 +23,7 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
 
     private lateinit var sensorManager: SensorManager
     private lateinit var stepCountSensor: Sensor
+    var currentSteps: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +41,8 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
             requestPermissions(arrayOf(Manifest.permission.ACTIVITY_RECOGNITION), 0)
         }
 
-//        sensorManager = getSystem
-
+        sensorManager = requireActivity().getSystemService(SENSOR_SERVICE) as SensorManager
+        stepCountSensor = sensorManager!!.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR)
         return binding.root
     }
 
@@ -53,13 +57,23 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
 
     override fun onStart() {
         super.onStart()
+        if (stepCountSensor != null) {
+            sensorManager!!.registerListener(
+                this,
+                stepCountSensor,
+                SensorManager.SENSOR_DELAY_FASTEST
+            )
+        }
     }
 
-    override fun onSensorChanged(p0: SensorEvent?) {
-        TODO("Not yet implemented")
+    override fun onSensorChanged(event: SensorEvent?) {
+        if (event!!.sensor.type == Sensor.TYPE_STEP_DETECTOR) {
+            if (event.values[0] == 1.0f) {
+                currentSteps++
+                Toast.makeText(context, "$currentSteps", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
-    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-        TODO("Not yet implemented")
-    }
+    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {}
 }
