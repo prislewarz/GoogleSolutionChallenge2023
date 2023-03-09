@@ -13,7 +13,6 @@ class AlertReceiver: BroadcastReceiver() {
         var time = intent?.extras?.getString("time")
         var nb: NotificationCompat.Builder = notificationHelper.getChannelNotification(time)
 
-
         notificationHelper.getManager().notify(1, nb.build())
     }
 }
