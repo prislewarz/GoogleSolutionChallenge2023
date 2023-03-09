@@ -1,10 +1,13 @@
 package com.example.myapplication
 
+import NeckSetFragment
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
 import android.content.ContextWrapper
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.util.Log
@@ -38,9 +41,17 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
 
     fun getChannelNotification(time:String?):NotificationCompat.Builder{
 
+        val intent = Intent(this, NeckStretchingStart::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , intent , 0)
+
         return NotificationCompat.Builder(applicationContext, channelID)
-            .setContentTitle(time)
-            .setContentText("b")
+            .setContentTitle(getString(R.string.neck_notification_title))
+            .setContentText(getString(R.string.neck_notification_content))
             .setSmallIcon(R.drawable.neck)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
+
     }
 }

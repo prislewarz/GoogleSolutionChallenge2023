@@ -110,6 +110,13 @@
 
             </LinearLayout>
 
+            <CheckBox
+                android:id="@+id/isEverydaycb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/neck_everyday_cb"
+                android:layout_gravity="center"/>
+
 
         </LinearLayout>
     </ScrollView>
