@@ -25,14 +25,15 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
     private lateinit var stepCountSensor: Sensor
     var currentSteps: Int = 0
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentWalkingSetBinding.inflate(inflater, container, false)
-        initNumberPicker()
 
+        initNumberPicker()
+        permissionCheck()
+        return binding.root
+    }
+
+    private fun permissionCheck(){
         if (ContextCompat.checkSelfPermission(
                 requireActivity().applicationContext,
                 Manifest.permission.ACTIVITY_RECOGNITION
@@ -40,10 +41,6 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
         ) {
             requestPermissions(arrayOf(Manifest.permission.ACTIVITY_RECOGNITION), 0)
         }
-
-        sensorManager = requireActivity().getSystemService(SENSOR_SERVICE) as SensorManager
-        stepCountSensor = sensorManager!!.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR)
-        return binding.root
     }
 
     private fun initNumberPicker(){
@@ -57,6 +54,9 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
 
     override fun onStart() {
         super.onStart()
+        sensorManager = requireActivity().getSystemService(SENSOR_SERVICE) as SensorManager
+        stepCountSensor = sensorManager!!.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR)
+
         if (stepCountSensor != null) {
             sensorManager!!.registerListener(
                 this,
