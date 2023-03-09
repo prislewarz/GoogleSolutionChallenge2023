@@ -8,7 +8,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TimePicker
+import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.example.myapplication.AlertReceiver
@@ -34,10 +37,7 @@ class NeckSetFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentNeckSetBinding.inflate(inflater, container, false)
-        binding.neckStrechingStart.setOnClickListener {
-            val intent = Intent(activity, NeckStretchingStart::class.java)
-            startActivity(intent)
-        }
+
 
         binding.setBtn.setOnClickListener{
             var time = Calendar.getInstance()
@@ -61,10 +61,10 @@ class NeckSetFragment : Fragment() {
             builder.show()
         }
 
+        startNeckStreching()
+        initAlertMessage()
         return binding.root
     }
-
-
 
     private fun updateTimeText(calendar: Calendar) {
         var curTime = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.time)
@@ -92,6 +92,23 @@ class NeckSetFragment : Fragment() {
         else{
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
         }
+    }
 
+    private fun startNeckStreching(){
+        val startNeckStrechingButton: Button = binding.neckStrechingStart
+        startNeckStrechingButton.setOnClickListener {
+            val intent = Intent(activity, NeckStretchingStart::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun initAlertMessage(){
+        val setButton: Button = binding.setMeesageButton
+        val setMessage: EditText = binding.setMessage
+        var alertMessage: String
+        setButton.setOnClickListener {
+            alertMessage = "${setMessage.text}"
+            Toast.makeText(context, alertMessage, Toast.LENGTH_LONG).show()
+        }
     }
 }

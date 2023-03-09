@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/eye_streching_start">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <FrameLayout
                 android:layout_marginTop="20dp"
@@ -30,13 +30,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:background="@drawable/radius"/>
-
                 <TextView
                     android:layout_width="361dp"
-                    android:layout_height="215dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/eye_warning" />
-
             </FrameLayout>
 
             <TextView
