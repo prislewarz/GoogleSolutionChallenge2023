@@ -1,5 +1,6 @@
 import android.app.AlarmManager
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_IMMUTABLE
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -79,7 +80,7 @@ class NeckSetFragment : Fragment() {
         var curTime = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.time)
         intent.putExtra("time", curTime)
 
-        var pendingIntent = PendingIntent.getBroadcast(mainActivity, 1, intent, 0 )
+        var pendingIntent = PendingIntent.getBroadcast(mainActivity, 1, intent, PendingIntent.FLAG_IMMUTABLE )
 
         if(calendar.before(Calendar.getInstance())){
             calendar.add(Calendar.DATE, 1)

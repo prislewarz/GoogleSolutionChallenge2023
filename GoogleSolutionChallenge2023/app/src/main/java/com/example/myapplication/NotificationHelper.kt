@@ -44,7 +44,7 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
         val intent = Intent(this, NeckStretchingStart::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , intent , 0)
+        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , intent , PendingIntent.FLAG_IMMUTABLE)
 
         return NotificationCompat.Builder(applicationContext, channelID)
             .setContentTitle(getString(R.string.neck_notification_title))
