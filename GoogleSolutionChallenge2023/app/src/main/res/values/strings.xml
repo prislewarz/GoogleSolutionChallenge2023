@@ -42,4 +42,5 @@
     <string name ="neck_notification_title">목 스트레칭을 할 시간입니다!</string>
     <string name ="neck_notification_content">잠깐 시간을 내어 목의 피로를 풀어줍시다!</string>
     <string name ="neck_everyday_cb">매일 목 스트레칭 알림을 보냅니다.</string>
+    <string name ="timelog_title">사용 시간을 설정해주세요.</string>
 </resources>
