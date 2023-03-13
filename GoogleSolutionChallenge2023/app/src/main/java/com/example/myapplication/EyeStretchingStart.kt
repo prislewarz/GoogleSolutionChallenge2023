@@ -11,6 +11,12 @@ class EyeStretchingStart : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = EyeStretchingStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val alertMessage = intent.getStringExtra("경고문")
+        if(alertMessage != null){
+            binding.eyeStretchingIntro.text = alertMessage
+        }
+
         binding.startButton.setOnClickListener{
             val intent = Intent(this, StretchingMiddle::class.java)
             intent.putExtra("eyespin1", 0)

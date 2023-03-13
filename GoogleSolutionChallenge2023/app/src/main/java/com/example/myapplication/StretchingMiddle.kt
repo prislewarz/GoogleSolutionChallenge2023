@@ -39,7 +39,7 @@ class StretchingMiddle : AppCompatActivity() {
         var page_num = 0
 
         binding.nextButton.isVisible = false
-        //나중에 합치기
+
         if(intent.hasExtra("eyespin1")){
             binding.stretchingDes.text = getString(R.string.eyespin1_des)
             page_num = 1

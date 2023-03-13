@@ -27,6 +27,7 @@ class NeckSetFragment : Fragment() {
     private var _binding: FragmentNeckSetBinding? = null
     private val binding get() = _binding!!
     lateinit var mainActivity: MainActivity
+    private var alertMessage: String = "null"
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -98,18 +99,24 @@ class NeckSetFragment : Fragment() {
     private fun startNeckStreching(){
         val startNeckStrechingButton: Button = binding.neckStrechingStart
         startNeckStrechingButton.setOnClickListener {
-            val intent = Intent(activity, NeckStretchingStart::class.java)
-            startActivity(intent)
+            val alertIntent = Intent(activity, NeckStretchingStart::class.java)
+            if(alertMessage != "null"){
+                alertIntent.putExtra("경고문", alertMessage)
+            }
+
+            startActivity(alertIntent)
         }
     }
 
-    private fun initAlertMessage(){
+    private fun initAlertMessage() {
         val setButton: Button = binding.setMeesageButton
         val setMessage: EditText = binding.setMessage
-        var alertMessage: String
+
         setButton.setOnClickListener {
             alertMessage = "${setMessage.text}"
             Toast.makeText(context, alertMessage, Toast.LENGTH_LONG).show()
+
         }
+
     }
 }
