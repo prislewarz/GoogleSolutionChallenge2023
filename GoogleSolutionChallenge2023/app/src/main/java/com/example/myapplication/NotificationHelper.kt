@@ -52,6 +52,5 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
             .setSmallIcon(R.drawable.neck)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
-
     }
 }

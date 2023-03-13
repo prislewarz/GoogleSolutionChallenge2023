@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -24,12 +25,13 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private lateinit var stepCountSensor: Sensor
     var currentSteps: Int = 0
-
+    var walkingCount: Int? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentWalkingSetBinding.inflate(inflater, container, false)
 
         initNumberPicker()
         permissionCheck()
+        setWalkingTime()
         return binding.root
     }
 
@@ -52,6 +54,13 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
         }
     }
 
+    private fun setWalkingTime(){
+        val walkingSetButton: Button = binding.walkingTimeSetButton
+        walkingSetButton.setOnClickListener {
+            walkingCount = binding.npker.value
+        }
+    }
+
     override fun onStart() {
         super.onStart()
         sensorManager = requireActivity().getSystemService(SENSOR_SERVICE) as SensorManager
@@ -70,7 +79,9 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
         if (event!!.sensor.type == Sensor.TYPE_STEP_DETECTOR) {
             if (event.values[0] == 1.0f) {
                 currentSteps++
-                Toast.makeText(context, "$currentSteps", Toast.LENGTH_LONG).show()
+                if(currentSteps==walkingCount){
+                    Toast.makeText(context, "$walkingCount", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }
