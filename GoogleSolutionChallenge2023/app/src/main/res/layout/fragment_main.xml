@@ -7,7 +7,7 @@
     tools:context=".MainFragment">
     <ImageView
         android:id="@+id/mainImage"
-        android:background="@drawable/mainImage"
+        android:background="@drawable/mainimage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +25,14 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/eyeStrechingCountTitle"
+        android:id="@+id/neckStrechingCountTitle"
         app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        android:layout_marginTop="20dp"
-        android:text="이번주 눈 스트레칭 횟수"
+        android:layout_marginTop="150dp"
+        android:text="이번주 목 스트레칭 횟수"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
