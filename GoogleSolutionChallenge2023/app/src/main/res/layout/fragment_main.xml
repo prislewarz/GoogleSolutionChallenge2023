@@ -14,25 +14,41 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:scaleType="centerInside"/>
+
     <TextView
         android:id="@+id/eyeStrechingCountTitle"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        android:layout_marginTop="20dp"
-        android:text="이번주 눈 스트레칭 횟수"
-        android:textStyle="bold"
-        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="125dp"
+        android:text="이번주 눈 스트레칭 횟수"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/mainImage"
+        tools:layout_editor_absoluteX="106dp" />
 
     <TextView
         android:id="@+id/neckStrechingCountTitle"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        android:layout_marginTop="150dp"
-        android:text="이번주 목 스트레칭 횟수"
-        android:textStyle="bold"
-        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="125dp"
+        android:text="이번주 목 스트레칭 횟수"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/mainImage"
+        tools:layout_editor_absoluteX="106dp" />
 
+    <TextView
+        android:id="@+id/AlarmCountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="308dp"
+        android:layout_marginLeft="125dp"
+        android:text="이번주 스몸비 경고 횟수"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/mainImage"
+        tools:layout_editor_absoluteX="106dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

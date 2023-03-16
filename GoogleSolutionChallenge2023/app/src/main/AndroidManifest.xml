@@ -58,6 +58,7 @@
                 android:value="" />
         </activity>
         <receiver android:name = ".AlertReceiver"/>
+
     </application>
 
 
