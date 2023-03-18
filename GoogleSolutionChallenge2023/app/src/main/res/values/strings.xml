@@ -1,46 +1,32 @@
 <resources>
     <string name="app_name">GoogleSolutionChallenge2023</string>
 
-    <string name="eye_stretching_intro">당신은 설정된 사용시간을 초과했습니다.\n  그동안 쌓인 눈의 피로를 풀어줍시다.</string>
-    <string name="neck_stretching_intro">스마트폰을 보며 하루 동안 쌓인\n 목의 피로를 풀어 줄 시간입니다.</string>
-    <string name="stretching_start_stop">STOP</string>
+    <string name="eye_stretching_intro">당신은 설정된 사용시간을 초과했습니다.   그동안 쌓인 눈의 피로를 풀어줍시다.</string>
+    <string name="neck_stretching_intro">스마트폰을 보며 하루 동안 쌓인  목의 피로를 풀어 줄 시간입니다.</string>
     <string name="end_intro">수고하셨습니다!</string>
 
-    <string name="eyespin1_des">눈동자를 시계방향으로\n <b>천천히 5바퀴</b> 돌려줍시다.</string>
-    <string name="eyespin2_des">이번엔 눈동자를 반시계방향으로\n <b>천천히 5바퀴</b> 돌려줍시다.</string>
-    <string name="eyeupdown_des">눈동자를 <b>위로 올리고\n5초간</b> 멈춰줍시다.\n 그리고 <b>아래로 내리고\n 5초간</b> 멈춰줍시다.\n 이를 5회 반복합니다.</string>
-    <string name="eyeleftright_des">눈동자를 <b>왼쪽으로 돌리고\n5초간</b> 멈춰줍시다.\n 그리고 <b>오른쪽으로 돌리고\n 5초간</b> 멈춰줍시다.\n 이를 5회 반복합니다.</string>
-    <string name="eyepush_des">손가락 끝으로 눈두덩이를\n <b>3초간 눌러주고 뗍시다.</b>\n 이를 10회 반복합니다.</string>
-    <string name="eyeseefar_des">잠깐 스마트폰에서 눈을 떼고\n <b>비교적 멀리있는 사물을</b>\n 바라봅시다.</string>
+    <string name="eyespin2_des">이번엔 눈동자를 반시계방향으로  <b>천천히 5바퀴</b> 돌려줍시다.</string>
+    <string name="eyeleftright_des">눈동자를 <b>왼쪽으로 돌리고 5초간</b> 멈춰줍시다.  그리고 <b>오른쪽으로 돌리고  5초간</b> 멈춰줍시다.  이를 5회 반복합니다.</string>
+    <string name="eyepush_des">손가락 끝으로 눈두덩이를  <b>3초간 눌러주고 뗍시다.</b>  이를 10회 반복합니다.</string>
+    <string name="eyeseefar_des">잠깐 스마트폰에서 눈을 떼고  <b>비교적 멀리있는 사물을</b>  바라봅시다.</string>
 
-    <string name="neckforehead_des">깍지 낀 손을 이마에 올립시다.\n <b>손은 이마를 밀고, 이마는 손을 밀어줍시다.</b>\n 이를 6초동안 한 후, 3초 쉬며\n 10번 반복합니다.</string>
-    <string name="neckup_des">손가락을 턱 아래에 두고\n <b>턱을 지긋이 위로 밀어줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
-    <string name="neckdown_des">손가락을 똑같은 위치에 두고\n <b>턱을 지긋이 아래로 당겨줍시다.</b>\n 이를 6초간 유지해줍시다.</string>
-    <string name="neckleftright_des"><b>왼손을 왼쪽 뺨에 두고</b>\n 6초간 밀어줍시다.\n 그 후 반대로 6초간 밀어줍시다.</string>
+    <string name="neckforehead_des">깍지 낀 손을 이마에 올립시다.  <b>손은 이마를 밀고, 이마는 손을 밀어줍시다.</b>  이를 6초동안 한 후, 3초 쉬며  10번 반복합니다.</string>
+    <string name="neckup_des">손가락을 턱 아래에 두고  <b>턱을 지긋이 위로 밀어줍시다.</b>  이를 6초간 유지해줍시다.</string>
+    <string name="neckdown_des">손가락을 똑같은 위치에 두고  <b>턱을 지긋이 아래로 당겨줍시다.</b>  이를 6초간 유지해줍시다.</string>
+    <string name="neckleftright_des"><b>왼손을 왼쪽 뺨에 두고</b>  6초간 밀어줍시다.  그 후 반대로 6초간 밀어줍시다.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="neck_warning">스마트폰을 볼 때, 폰을 밑에 두고 사용하면 목에 큰 부담이 가요.\n\n
-
-목을 앞으로 1cm 내밀 때마다 가해지는 하중은 2~3kg가 늘어나  큰 부담이 가고 거북목증후군이 발생할 수 있어요. 심지어 거북목이 지속되면 머리에 가는 혈액과 산소 공급에 방해가 돼 집중력 저하나 두통이 발생할 수 있어요.\n\n
-
-그러니, 턱을 당기고 귀와 어깨가 일자가 되도록 하여 목의 부담을 줄여주세요.\n\n</string>
-    <string name ="eye_warning">\n스마트폰을 오래 보고 있으면 눈에 큰 피로감을 줘요.\n\n
-
-스마트폰을 오래 보고 있으면 눈을 덜 깜박이게 돼, 안구 건조증이 발생하고 20~30대에 노안이 오는 원인이 되요.\n\n
-
-어두운 곳에서 스마트폰을 사용하는 것은 녹내장을 유발하는 원인이 되기에 더욱 더 지양해야 되요.\n\n
-
-그러니 눈을 자주 깜박이고, 사용 도중에 먼 곳을 바라봐서 눈의 피로도를 줄여주세요.
-</string>
-    <string name ="smobi_warning">\n\n보행중에 스마트폰을 사용하는 것은 사고를 유발할 수 있어요.\n\n
-
-걸어다니면서 스마트폰을 사용하면 주변 인지력이 떨어져 다른 사람과 충돌하거나 교통사고가 발생할 수 있어요.\n\n
-
-그러니 보행중에는 가능하면 스마트폰 사용을 멈춰주세요.</string>
+    <string name="neck_warning">"스마트폰을 볼 때, 폰을 밑에 두고 사용하면 목에 큰 부담이 가요.    목을 앞으로 1cm 내밀 때마다 가해지는 하중은 2~3kg가 늘어나  큰 부담이 가고 거북목증후군이 발생할 수 있어요. 심지어 거북목이 지속되면 머리에 가는 혈액과 산소 공급에 방해가 돼 집중력 저하나 두통이 발생할 수 있어요.    그러니, 턱을 당기고 귀와 어깨가 일자가 되도록 하여 목의 부담을 줄여주세요.  "</string>
+    <string name ="eye_warning">" 스마트폰을 오래 보고 있으면 눈에 큰 피로감을 줘요.    스마트폰을 오래 보고 있으면 눈을 덜 깜박이게 돼, 안구 건조증이 발생하고 20~30대에 노안이 오는 원인이 돼요.    어두운 곳에서 스마트폰을 사용하는 것은 녹내장을 유발하는 원인이 되기에 더욱 더 지양해야 해요.    그러니 눈을 자주 깜박이고, 사용 도중에 먼 곳을 바라봐서 눈의 피로도를 줄여주세요. "</string>
+    <string name ="smobi_warning">"  보행중에 스마트폰을 사용하는 것은 사고를 유발할 수 있어요.    걸어다니면서 스마트폰을 사용하면 주변 인지력이 떨어져 다른 사람과 충돌하거나 교통사고가 발생할 수 있어요.    그러니 보행중에는 가능하면 스마트폰 사용을 멈춰주세요."</string>
 
     <string name ="neck_notification_title">목 스트레칭을 할 시간입니다!</string>
     <string name ="neck_notification_content">잠깐 시간을 내어 목의 피로를 풀어줍시다!</string>
     <string name ="neck_everyday_cb">매일 목 스트레칭 알림을 보냅니다.</string>
     <string name ="timelog_title">사용 시간을 설정해주세요.</string>
+    <string name="stretching_start_stop">STOP!</string>
+    <string name="eyespin1_des">눈동자를 시계방향으로  <b>천천히 5바퀴</b> 돌려줍시다.</string>
+    <string name="eyeupdown_des">눈동자를 <b>위로 올리고 5초간</b> 멈춰줍시다.  그리고 <b>아래로 내리고  5초간</b> 멈춰줍시다.  이를 5회 반복합니다.</string>
+
 </resources>
