@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GoogleSolutionChallenge2023</string>
+    <string name="eye_stretching_intro">You have exceeded the set usage time. Let\'s relieve the tiredness of the eyes that have accumulated so far.</string>
+    <string name="neck_stretching_intro">It\'s time to relieve neck fatigue accumulated during the day while looking at your smartphone.</string>
+    <string name="stretching_start_stop">STOP!</string>
+    <string name="end_intro">Thank you for your effort!</string>
+    <string name="eyespin1_des">Let\'s turn the pupils clockwise <b>slowly 5 turns</b>.</string>
+    <string name="eyespin2_des">This time, let\'s turn the pupils counterclockwise <b>slowly 5 turns</b>.</string>
+    <string name="eyeupdown_des">Let\'s raise the pupils <b>up and hold them for 5 seconds</b>. Then <b>down and pause for 5 seconds</b>. Repeat this 5 times.</string>
+    <string name="eyeleftright_des">Turn your pupils <b>to the left and pause</b> for 5 seconds. And let\'s <b>turn them to the right and hold it for 5 seconds</b>. Repeat this 5 times.</string>
+    <string name="eyepush_des">Press the eyelids with your fingertips <b>for 3 seconds and then release them.</b> Repeat this 10 times.</string>
+    <string name="eyeseefar_des">Take your eyes off your smartphone for a moment <b>and look at an object</b> relatively far away.</string>
+    <string name="neckforehead_des">Let\'s put your clasped hands on your forehead. <b>Put your hand on your forehead, and your forehead on your hand.</b> Do this for 6 seconds, then rest for 3 seconds and repeat 10 times.</string>
+    <string name="neckup_des">Place your finger under your chin and <b>slide your chin up gently</b> and hold it for 6 seconds.</string>
+    <string name="neckdown_des">Keep your fingers in the same spot and <b>tuck your chin gently</b> and hold it for 6 seconds.</string>
+    <string name="neckleftright_des"><b>Place your left hand on your left cheek</b> and push for 6 seconds. After that, let\'s push the reverse for 6 seconds.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="neck_warning">When looking at a smartphone, if you use it while holding it down, it puts a lot of strain on your neck. Every time the neck is pushed forward by 1 cm, the load applied increases by 2 to 3 kg, which is a big burden and can cause turtle neck syndrome. Even if the turtle neck lasts, it can interfere with the blood and oxygen supply to the head, resulting in poor concentration or headaches. So, tuck your chin in and keep your ears and shoulders in line to ease the strain on your neck.</string>
+    <string name="eye_warning">If you look at your smartphone for a long time, your eyes get very tired. If you look at your smartphone for a long time, you blink less, which causes dry eye syndrome and presbyopia in your 20s and 30s. Using a smartphone in the dark can cause glaucoma, so you should avoid it even more. So, blink frequently and look into the distance while using to reduce eye fatigue.</string>
+    <string name="smobi_warning">Using a smartphone while walking can cause an accident. If you use your smartphone while walking, your awareness of your surroundings may decrease and you may collide with others or cause a traffic accident. So, if possible, stop using your smartphone while walking.</string>
+    <string name="neck_notification_title">It\'s time for a neck stretch!</string>
+    <string name="neck_notification_content">Let\'s take a moment to relieve neck fatigue!</string>
+    <string name="neck_everyday_cb">Send a daily neck stretching reminder.</string>
+    <string name="timelog_title">Please set the usage time.</string>
+</resources>
