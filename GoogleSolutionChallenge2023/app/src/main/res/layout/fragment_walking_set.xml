@@ -39,14 +39,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
+            android:id="@+id/speech_text"
+            android:layout_marginLeft="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:hint="보행 중 스마트폰 사용은 위험합니다."/>
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:background="@drawable/button_background"
             android:text="적용"
             android:textColor="@color/black" />
@@ -59,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="알림 시간 설정하기" />
+        android:text="걸음 수 설정하기" />
     <NumberPicker
         android:theme="@style/NumberPickerTheme"
         android:id="@+id/npker"
@@ -73,4 +77,13 @@
         android:text="적용"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"/>
+
+    <CheckBox
+        android:id="@+id/withvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="경고 메시지의 음성을 출력합니다" />
+
+
 </LinearLayout>
