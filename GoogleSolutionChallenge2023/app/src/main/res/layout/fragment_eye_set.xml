@@ -44,7 +44,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginLeft="123dp"
                 android:theme="@style/text1"
-                android:text="눈 경고문 설정하기"/>
+                android:text="@string/set_eyewarn"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:layout_marginLeft="100dp"
-                    android:hint="눈 운동 할 시간입니다!"/>
+                    android:hint="@string/eyes_message"/>
                 <Button
                     android:id="@+id/setMessageButton"
                     android:layout_marginLeft="10dp"
@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="적용"/>
+                    android:text="@string/set_mes_btn"/>
             </LinearLayout>
 
             <TextView
@@ -72,7 +72,7 @@
                 android:layout_marginLeft="123dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="알림 시간 설정하기" />
+                android:text="@string/set_alarm_time" />
 
             <NumberPicker
                 android:id="@+id/npker"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/button_background"
-                android:text="적용"
+                android:text="@string/set_mes_btn"
                 android:textColor="@color/black" />
         </LinearLayout>
     </ScrollView>
@@ -95,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textColor="@color/black"
-        android:text="눈 스트레칭 시작"
+        android:text="@string/eye_str_start"
         android:background="@drawable/button_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

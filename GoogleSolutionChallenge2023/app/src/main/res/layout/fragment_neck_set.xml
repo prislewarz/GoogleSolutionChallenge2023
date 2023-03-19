@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="120dp"
                 android:layout_marginTop="50dp"
-                android:text="목 경고문 설정하기"
+                android:text="@string/set_neckwarn"
                 android:theme="@style/text1" />
 
             <LinearLayout
@@ -64,14 +64,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100dp"
-                    android:hint="목 운동할 시간입니다!" />
+                    android:hint="@string/necks_message" />
 
                 <Button
                     android:id="@+id/setMeesageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_background"
-                    android:text="적용"
+                    android:text="@string/set_mes_btn"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/black" />
             </LinearLayout>
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="120dp"
                 android:layout_marginTop="30dp"
-                android:text="알림 시간 설정하기"
+                android:text="@string/set_alarm_time"
                 android:theme="@style/text1" />
 
 
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="5dp"
-                android:text="N시"
+                android:text="@string/hour"
                 android:textSize="30dp"
                 android:theme="@style/text1" />
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="160dp"
                 android:background="@drawable/button_background"
-                android:text="설정"
+                android:text="@string/setting"
 
                 android:textColor="@color/black" />
 
@@ -127,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/button_background"
-        android:text="목 스트레칭 시작"
+        android:text="@string/neck_str_start"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
