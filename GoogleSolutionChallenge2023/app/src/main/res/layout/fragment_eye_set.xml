@@ -42,19 +42,20 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="123dp"
+                android:layout_gravity="center"
                 android:theme="@style/text1"
                 android:text="@string/set_eyewarn"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
                 <EditText
                     android:id="@+id/setMessage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:layout_marginLeft="100dp"
+                    android:layout_gravity="center"
                     android:hint="@string/eyes_message"/>
                 <Button
                     android:id="@+id/setMessageButton"
@@ -69,7 +70,7 @@
             <TextView
                 android:theme="@style/text1"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="123dp"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/set_alarm_time" />
@@ -95,8 +96,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textColor="@color/black"
-        android:text="@string/eye_str_start"
         android:background="@drawable/button_background"
+        android:text="@string/eye_str_start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"

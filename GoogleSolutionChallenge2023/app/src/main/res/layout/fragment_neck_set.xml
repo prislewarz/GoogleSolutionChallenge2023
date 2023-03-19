@@ -21,7 +21,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <FrameLayout
                 android:layout_width="wrap_content"
@@ -49,21 +50,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
                 android:layout_marginTop="50dp"
+                android:layout_gravity="center"
                 android:text="@string/set_neckwarn"
                 android:theme="@style/text1" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
                 <EditText
                     android:id="@+id/setMessage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_gravity="center"
                     android:hint="@string/necks_message" />
 
                 <Button
@@ -79,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:text="@string/set_alarm_time"
                 android:theme="@style/text1" />
@@ -95,8 +97,8 @@
                 android:id="@+id/hourText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_marginTop="5dp"
+                android:layout_gravity="center"
                 android:text="@string/hour"
                 android:textSize="30dp"
                 android:theme="@style/text1" />
@@ -105,10 +107,9 @@
                 android:id="@+id/setBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="160dp"
                 android:background="@drawable/button_background"
                 android:text="@string/setting"
-
+                android:layout_gravity="center"
                 android:textColor="@color/black" />
 
             <CheckBox
