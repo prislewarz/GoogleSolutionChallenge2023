@@ -33,7 +33,7 @@
         android:layout_marginLeft="110dp"
         android:theme="@style/text1"
         android:textColor="@color/black"
-        android:text="스몸비 경고문 설정하기"/>
+        android:text="@string/set_smbwarn"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="보행 중 스마트폰 사용은 위험합니다!"/>
+            android:hint="@string/smb_message"/>
 
 
         <Button
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/button_background"
-            android:text="적용"
+            android:text="@string/set_mes_btn"
             android:textColor="@color/black" />
     </LinearLayout>
 
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="걸음 수 설정하기" />
+        android:text="@string/smb_setting" />
     <NumberPicker
         android:theme="@style/NumberPickerTheme"
         android:id="@+id/npker"
@@ -75,7 +75,7 @@
         android:background="@drawable/button_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="적용"
+        android:text="@string/set_mes_btn"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"/>
 
@@ -84,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="경고 메시지의 음성을 출력합니다" />
+        android:text="@string/warning_voice" />
 
 
 </LinearLayout>

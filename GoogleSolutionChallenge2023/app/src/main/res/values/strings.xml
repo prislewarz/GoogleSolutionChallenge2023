@@ -28,5 +28,19 @@
     <string name="stretching_start_stop">STOP!</string>
     <string name="eyespin1_des">눈동자를 시계방향으로  <b>천천히 5바퀴</b> 돌려줍시다.</string>
     <string name="eyeupdown_des">눈동자를 <b>위로 올리고 5초간</b> 멈춰줍시다.  그리고 <b>아래로 내리고  5초간</b> 멈춰줍시다.  이를 5회 반복합니다.</string>
+    <string name="set_eyewarn">눈 경고문 설정하기</string>
+    <string name="eyes_message">눈 운동 할 시간입니다!</string>
+    <string name="set_mes_btn">적용</string>
+    <string name="set_alarm_time">알림 시간 설정하기</string>
+    <string name="eye_str_start">눈 스트레칭 시작</string>
+    <string name="set_neckwarn">목 경고문 설정하기</string>
+    <string name="necks_message">목 운동 할 시간입니다!</string>
+    <string name="hour">N시</string>
+    <string name="setting">설정</string>
+    <string name="neck_str_start">목 스트레칭 시작</string>
+    <string name="set_smbwarn">스몸비 경고문 설정하기</string>
+    <string name="smb_message">보행 중 스마트폰 사용은 위험합니다!</string>
+    <string name="smb_setting">걸음 수 설정하기</string>
+    <string name="warning_voice">경고 메시지의 음성을 출력합니다.</string>
 
 </resources>

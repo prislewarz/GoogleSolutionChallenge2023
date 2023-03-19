@@ -13,7 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MainActivity : AppCompatActivity(){
+class  MainActivity : AppCompatActivity(){
     lateinit var binding: ActivityMainBinding
     var backKeyPressedTime : Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
