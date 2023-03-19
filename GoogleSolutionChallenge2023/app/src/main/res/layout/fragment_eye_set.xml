@@ -34,7 +34,7 @@
                     android:layout_width="361dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"
+                    android:textSize="20sp"
                     android:text="@string/eye_warning" />
             </FrameLayout>
 
@@ -42,10 +42,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="125dp"
+                android:layout_marginLeft="123dp"
                 android:theme="@style/text1"
-                android:textColor="@color/black"
-                android:text="경고문 설정하기"/>
+                android:text="눈 경고문 설정하기"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +54,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:hint="당신은 오랫동안 스마트폰을 사용하셨습니다."/>
+                    android:layout_marginLeft="100dp"
+                    android:hint="눈 운동 할 시간입니다!"/>
                 <Button
                     android:id="@+id/setMessageButton"
                     android:layout_marginLeft="10dp"
@@ -69,10 +69,9 @@
             <TextView
                 android:theme="@style/text1"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="125dp"
+                android:layout_marginLeft="123dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
                 android:text="알림 시간 설정하기" />
 
             <NumberPicker

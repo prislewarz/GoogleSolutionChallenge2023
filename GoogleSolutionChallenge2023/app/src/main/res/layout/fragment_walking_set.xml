@@ -18,9 +18,10 @@
             android:layout_height="200dp"
             android:background="@drawable/radius"/>
         <TextView
-            android:layout_width="359dp"
-            android:layout_height="174dp"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="20sp"
             android:text="@string/smobi_warning" />
 
     </FrameLayout>
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="110dp"
         android:theme="@style/text1"
         android:textColor="@color/black"
         android:text="스몸비 경고문 설정하기"/>
@@ -44,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="보행 중 스마트폰 사용은 위험합니다."/>
+            android:hint="보행 중 스마트폰 사용은 위험합니다!"/>
 
 
         <Button
@@ -59,7 +60,7 @@
     <TextView
         android:theme="@style/text1"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="125dp"
+        android:layout_marginLeft="135dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"

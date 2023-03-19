@@ -23,4 +23,5 @@
     <string name="neck_notification_content">Let\'s take a moment to relieve neck fatigue!</string>
     <string name="neck_everyday_cb">Send a daily neck stretching reminder.</string>
     <string name="timelog_title">Please set the usage time.</string>
+
 </resources>
