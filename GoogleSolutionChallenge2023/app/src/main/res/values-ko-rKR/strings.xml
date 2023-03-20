@@ -36,5 +36,6 @@
     <string name="set_smbwarn">스몸비 경고문 설정하기</string>
     <string name="smb_message">보행 중 스마트폰 사용은 위험합니다!</string>
     <string name="smb_setting">걸음 수 설정하기</string>
-    <string name="warning_voice">경고 메시지의 음성을 출력합니다.</string>
+    <string name="warning_voice">경고 메시지에 음성을 추가합니다.</string>
+    <string name="main">메인</string>
 </resources>

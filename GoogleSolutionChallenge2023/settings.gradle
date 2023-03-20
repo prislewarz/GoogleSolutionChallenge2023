@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "GoogleSolutionChallenge2023"
+rootProject.name = "stoPhone"
 include ':app'
