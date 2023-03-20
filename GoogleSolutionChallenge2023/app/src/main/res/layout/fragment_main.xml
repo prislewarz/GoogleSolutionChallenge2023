@@ -12,43 +12,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="250dp"
         android:scaleType="centerInside"/>
 
     <TextView
         android:id="@+id/eyeStrechingCountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="125dp"
+        android:layout_marginTop="30dp"
         android:text="이번주 눈 스트레칭 횟수"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        tools:layout_editor_absoluteX="106dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/neckStrechingCountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="125dp"
         android:text="이번주 목 스트레칭 횟수"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        tools:layout_editor_absoluteX="106dp" />
+        app:layout_constraintTop_toBottomOf="@+id/eyeStrechingCountTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
 
     <TextView
         android:id="@+id/AlarmCountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
-        android:layout_marginLeft="125dp"
         android:text="이번주 스몸비 경고 횟수"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/mainImage"
-        tools:layout_editor_absoluteX="106dp" />
-
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/neckStrechingCountTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
