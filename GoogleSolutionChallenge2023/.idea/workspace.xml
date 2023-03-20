@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4341890e-fce2-4d06-993c-4aa3946616af" name="Changes" comment="눈알림 완성" />
+    <list default="true" id="45dd7c48-bfce-4120-b037-42ba9832fff9" name="Changes" comment="눈알림 완성">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,17 +86,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_directory_selection": "C:/Users/LG/Desktop/GoogleSolutionChallenge2023/GoogleSolutionChallenge2023/app/src/main/res/values-night",
-    "last_opened_file_path": "C:/Users/82104/Desktop/gdsc/Solution Challenge complete/GoogleSolutionChallenge2023",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\GoogleSolutionChallenge2023\GoogleSolutionChallenge2023\app\src\main\res\drawable" />
@@ -167,27 +165,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4341890e-fce2-4d06-993c-4aa3946616af" name="Changes" comment="" />
+      <changelist id="45dd7c48-bfce-4120-b037-42ba9832fff9" name="Changes" comment="" />
       <created>1678749252521</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678749252521</updated>
     </task>
-    <task id="LOCAL-00001" summary="눈알림 완성">
-      <created>1679313720691</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1679313720691</updated>
-    </task>
-    <task id="LOCAL-00002" summary="눈알림 완성">
-      <created>1679314227546</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1679314227546</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,9 +183,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="눈알림 완성" />
-    <option name="LAST_COMMIT_MESSAGE" value="눈알림 완성" />
   </component>
 </project>
