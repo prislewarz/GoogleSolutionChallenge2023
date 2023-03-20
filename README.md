@@ -1,4 +1,4 @@
-## **StoPhone**
+## StoPhone
 
 # What is stoPhone?
 
