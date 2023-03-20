@@ -1,48 +1,71 @@
 package com.example.myapplication
 
 import android.app.Dialog
+import android.content.Context
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.Window
-import androidx.appcompat.app.AppCompatActivity
+import android.view.WindowManager.LayoutParams
 import com.example.myapplication.databinding.DialogTimeBinding
 
-class TimeDialog(private val context : AppCompatActivity) {
+class TimeDialog(context: Context) {
     private lateinit var binding: DialogTimeBinding
     private val dialog = Dialog(context)
+    val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-    private lateinit var listener : TimeDialogOKClickedListener
 
-    fun show(context : String){
+    fun show(){
+
+        binding = DialogTimeBinding.inflate(inflater)
+        val params: LayoutParams = dialog.getWindow()!!.getAttributes()
+
+        val lp = LayoutParams()
+        lp.copyFrom(dialog.window!!.attributes)
+        lp.width = 800
+        lp.height = LayoutParams.WRAP_CONTENT
+
+
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(binding.root)
         dialog.setCancelable(false)
 
         binding.hourPicker.minValue = 0
         binding.hourPicker.maxValue = 3
+
         binding.minutePicker.minValue = 0
         binding.minutePicker.maxValue = 59
 
+
+        dialog.show()
+
+        val window = dialog.window
+        window!!.attributes = lp
+
         binding.cancel.setOnClickListener(){
+
 
             dialog.dismiss()
         }
         binding.ok.setOnClickListener(){
-
+            onClickedListner.onClicked(binding.hourPicker.value, binding.minutePicker.value)
+            dialog.dismiss()
         }
-        dialog.show()
+
+
+
+
 
     }
+    interface BtnClickListner{
+        fun  onClicked(hour : Int, minute : Int)
 
-    fun setOnOKClickedListener(listener: (Int) -> Unit) {
-        this.listener = object: TimeDialogOKClickedListener {
-            override fun onOKClicked(content: Int) {
-                listener(content)
-            }
-        }
     }
-    interface TimeDialogOKClickedListener{
-        fun onOKClicked(content : Int){
+    private lateinit var onClickedListner : BtnClickListner
 
-        }
+    fun setOnClickedListener(listner: BtnClickListner){
+        onClickedListner = listner
     }
+
+
 
 }

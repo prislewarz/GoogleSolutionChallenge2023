@@ -25,6 +25,9 @@
     <style name="NumberPickerTheme">
         <item name="android:editTextColor">@color/black</item>
     </style>
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
 
     <style name="text1">
         <item name="android:fontFamily">@font/nanumsquareroundr</item>
