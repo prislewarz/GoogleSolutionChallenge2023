@@ -5,6 +5,7 @@
 It is unimaginable to separate modern people from smartphones, and we spend so much time on smartphones.
 
 In Korea, 24.2% of smartphone users are at risk of overdependence (high risk group + potential risk group), and many people are already addicted to smartphones, and the number is increasing year by year. This is not just a problem for South Korea. It's a global problem.
+
 The bigger problem is that addicting to smartphones doesn't end with simple addiction, anomalies occur in various parts of the body, such as eyes, neck, wrists, shoulders, and even traffic accidents occur while using smartphones while walking.
 
 To prevent physical syndrome caused by smartphones and solve the problem of using smartphones while walking, we created an app called stoPhone.
