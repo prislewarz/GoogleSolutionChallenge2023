@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
             .requestEmail()
             .build()
 
-        val signInGoogleBtn: SignInButton = binding.loginBtn
+        val signInGoogleBtn: SignInButton = binding.googleLoginBtn
         signInGoogleBtn.setOnClickListener{
             googleSignInClient = GoogleSignIn.getClient(this, gso)
             val signInIntent = googleSignInClient!!.signInIntent
