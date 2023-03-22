@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GoogleSolutionChallenge2023</string>
+    <string name="app_name">stoPhone</string>
 
     <string name="eye_stretching_intro">당신은 설정된 사용시간을 초과했습니다.   그동안 쌓인 눈의 피로를 풀어줍시다.</string>
     <string name="neck_stretching_intro">스마트폰을 보며 하루 동안 쌓인  목의 피로를 풀어 줄 시간입니다.</string>

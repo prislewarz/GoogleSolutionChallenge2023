@@ -36,11 +36,11 @@ class SignUpActivity : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "가입 완료", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Sign up", Toast.LENGTH_SHORT).show()
                     val intent: Intent = Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this, "가입 실패", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
                     Log.d("SignUp", "Error: ${task.exception}")
                 }
             }
