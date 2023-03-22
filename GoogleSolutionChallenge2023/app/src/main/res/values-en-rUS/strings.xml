@@ -22,7 +22,7 @@
     <string name="neck_notification_title">It\'s time for a neck stretch!</string>
     <string name="neck_notification_content">Let\'s take a moment to relieve neck fatigue!</string>
     <string name="neck_everyday_cb">Send a daily neck stretching reminder.</string>
-    <string name="timelog_title">Please set the usage time.</string>
+    <string name="timelog_title">Please set the usage time for repeating alarm.</string>
     <string name="set_eyewarn">Set a warning message of eyes</string>
     <string name="eyes_message">It\'s time to exercise your eyes!</string>
     <string name="set_mes_btn">Apply</string>
@@ -36,8 +36,12 @@
     <string name="set_smbwarn">Set a warning message of a smombie</string>
     <string name="smb_message">Using a smartphone while walking is dangerous!</string>
     <string name="smb_setting">Set the number of steps</string>
-    <string name="warning_voice">Add voice to the warning message.</string>
-    <string name="main">Main</string>
+    <string name="warning_voice">Sounds out warning message.</string>
+    <string name ="eye_notification_title">It\'s time for a eye stretch!</string>
+    <string name ="eye_notification_content">Let\'s take a moment to relieve eye fatigue!</string>
+    <string name="eye_set">Repeat every </string>
+
+
 
 
 </resources>

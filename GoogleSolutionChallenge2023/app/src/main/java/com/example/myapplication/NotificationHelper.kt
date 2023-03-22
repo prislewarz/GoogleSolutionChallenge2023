@@ -39,18 +39,39 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
         return getSystemService(NOTIFICATION_SERVICE) as NotificationManager
     }
 
-    fun getChannelNotification(time:String?):NotificationCompat.Builder{
+    fun getChannelNotification(identifyStretching : Int):NotificationCompat.Builder{
 
-        val intent = Intent(this, NeckStretchingStart::class.java).apply {
+        val neckIntent = Intent(this, NeckStretchingStart::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , intent , PendingIntent.FLAG_IMMUTABLE)
 
-        return NotificationCompat.Builder(applicationContext, channelID)
-            .setContentTitle(getString(R.string.neck_notification_title))
-            .setContentText(getString(R.string.neck_notification_content))
-            .setSmallIcon(R.drawable.neck)
-            .setContentIntent(pendingIntent)
-            .setAutoCancel(true)
+        val eyeIntent = Intent(this, EyeStretchingStart::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
+        if(identifyStretching == 1){
+            val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , neckIntent , PendingIntent.FLAG_IMMUTABLE)
+            return NotificationCompat.Builder(applicationContext, channelID)
+                .setContentTitle(getString(R.string.neck_notification_title))
+                .setContentText(getString(R.string.neck_notification_content))
+                .setSmallIcon(R.drawable.neck)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+        }
+        else{
+            val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 , eyeIntent , PendingIntent.FLAG_IMMUTABLE)
+            Log.d("abc", "111")
+            return NotificationCompat.Builder(applicationContext, channelID)
+                .setContentTitle(getString(R.string.eye_notification_title))
+                .setContentText(getString(R.string.eye_notification_content))
+                .setSmallIcon(R.drawable.eye)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+
+        }
+
+
+
+
     }
 }
