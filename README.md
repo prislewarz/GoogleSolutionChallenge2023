@@ -1,10 +1,14 @@
-## 섭취 영양소 **관리 앱**
+## StoPhone
 
-건강한 생활을 위해서는 바람직한 식습관을 갖는 것이 무엇보다 중요하다. 성인들이 많이 걸리는 고혈압, 당뇨, 비만 등의 만성 질환은 대부분 잘못된 식습관 때문에 생긴다. 특히 40대부터는 젊을 때 마음껏 먹고 폭음했던 영향이 서서히 각종 만성 질환으로 나타나는 시기다.
+# What is stoPhone?
 
-2014년 질병관리본부 건강통계 조사 결과에 따르면 성인 2명 중 1명은 비만, 고혈압, 당뇨병, 고콜레스테롤혈증 중 한 가지 이상을 앓고 있는 것으로 나타났다. 특히 성인의 23.6%는 2개 이상의 만성 질환을, 7.9%는 3개 이상의 복합적인 만성 질환을 가지고 있었으며, 여성(46.7%)보다 남성(61.5%)이, 또 나이가 많을수록 발병률이 더 뚜렷하게 증가하였다.
+It is unimaginable to separate modern people from smartphones, and we spend so much time on smartphones.
 
-오랜 기간 잘못된 생활습관과 식습관이 축적되어 생기는 성인병인 만큼 건강을 지키기 위해서는 올바른 식생활에 더욱 관심을 기울여야 한다.
+In Korea, 24.2% of smartphone users are at risk of overdependence (high risk group + potential risk group), and many people are already addicted to smartphones, and the number is increasing year by year. This is not just a problem for South Korea. It's a global problem.
+
+The bigger problem is that addicting to smartphones doesn't end with simple addiction, anomalies occur in various parts of the body, such as eyes, neck, wrists, shoulders, and even traffic accidents occur while using smartphones while walking.
+
+To prevent physical syndrome caused by smartphones and solve the problem of using smartphones while walking, we created an app called stoPhone.
 
 ### 기능
 
