@@ -1,18 +1,18 @@
-## StoPhone
+# StoPhone
 
-# What is stoPhone?
+## What is stoPhone?
 
 It is unimaginable to separate modern people from smartphones, and we spend so much time on smartphones.
 
 In Korea, 24.2% of smartphone users are at risk of overdependence (high risk group + potential risk group), and many people are already addicted to smartphones, and the number is increasing year by year. This is not just a problem for South Korea. It's a global problem.
 
-The bigger problem is that addicting to smartphones doesn't end with simple addiction, anomalies occur in various parts of the body, such as eyes, neck, wrists, shoulders, and even traffic accidents occur while using smartphones while walking.
+The bigger problems are that addiction to smartphones doesn't end with simple addiction, anomalies occur in various parts of the body, such as eyes, neck, wrists, shoulders. In addition, traffic accidents caused by using smartphones while walking, called Smombie, are also a big problem.
 
-To prevent physical syndrome caused by smartphones and solve the problem of using smartphones while walking, we created an app called stoPhone.
+To prevent physical syndrome caused by smartphones and solve the problems caused by Smombie, we created an app called stoPhone.
 
-### 기능
+## Feature
 
-### 1. 섭취 음식 추가 방법
+### 1. 
 
 1. 수동으로 직접 등록 (DB로 구현)
 2. Google Vision AI API를 통해 영수증 인식 (이미지에서 텍스트를 인식하는 기능이 있음)
