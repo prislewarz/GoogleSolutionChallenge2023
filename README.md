@@ -1,5 +1,3 @@
-### StoPhone
-
 ## What is stoPhone?
 
 It is unimaginable to separate modern people from smartphones, and we spend so much time on smartphones.
