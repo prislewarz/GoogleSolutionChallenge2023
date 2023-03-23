@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
-
-    <ImageView
-        android:id="@+id/logo_image"
-        android:layout_width="206dp"
-        android:layout_height="214dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="20dp"/>
-
+    tools:context=".SignUpActivity"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/name_edit"
@@ -65,4 +57,4 @@
         android:text="Sign up"
         android:textColor="@color/black"
         android:textSize="20sp"/>
-</RelativeLayout>
+</LinearLayout>
