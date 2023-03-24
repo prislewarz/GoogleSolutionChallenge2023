@@ -1,10 +1,18 @@
 package com.example.myapplication
 
+import android.Manifest
 import android.app.ActivityManager
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.hardware.Camera
+import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
+import android.view.SurfaceHolder
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
 import com.example.myapplication.databinding.StretchingMiddleBinding
 import java.util.*
@@ -28,6 +36,7 @@ class StretchingMiddle : AppCompatActivity() {
         }
         return "ERROR"
     }
+    private var page_num = 0
 
     private lateinit var binding : StretchingMiddleBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,9 +44,8 @@ class StretchingMiddle : AppCompatActivity() {
         binding = StretchingMiddleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        checkCameraPermission()
         //인텐드가 EyeStretchingStart에서 오면 eyespin1이 옴 => 첫번째 눈 스트레칭 화면 작동, 그리고 다음 스트레칭이 나오도록 page_num을 1로 변화
-        var page_num = 0
-
         binding.nextButton.isVisible = false
 
         if(intent.hasExtra("eyespin1")){
@@ -49,8 +57,6 @@ class StretchingMiddle : AppCompatActivity() {
                     binding.nextButton.isVisible = true
                 }
             }
-
-
         }//인텐드가 NeckStretchingStart에서 오면 neckforehead가 옴 => 첫번째 목 스트레칭 화면 작동, 그리고 다음 스트레칭이 나오도록 page_num을 7로 변화
         else if(intent.hasExtra("neckforehead")){
             binding.stretchingDes.text = getString(R.string.neckforehead_des)
@@ -61,29 +67,9 @@ class StretchingMiddle : AppCompatActivity() {
                     binding.nextButton.isVisible = true
                 }
             }
-
-
         }
 
-        binding.nextButton.setOnClickListener{
-            if(page_num == 6 || page_num == 10){
-                val intent = Intent(this, StretchingEnd::class.java)
-                finish()
-                startActivity(intent)
-
-            }
-            else{
-                binding.nextButton.isVisible = false
-                binding.stretchingDes.text = page_num_check(page_num)
-                page_num++
-
-                Timer().schedule(5000) {
-                    runOnUiThread {
-                            binding.nextButton.isVisible = true
-                        }
-                    }
-                }
-        }
+        initNextButton()
     }
 
     override fun onPause() {
@@ -95,6 +81,39 @@ class StretchingMiddle : AppCompatActivity() {
 
     override fun onBackPressed() {
         //super.onBackPressed()
+    }
+
+    private fun checkCameraPermission(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            // 카메라 실행 부분
+            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                
+            } else {
+                ActivityCompat.requestPermissions(this@StretchingMiddle, arrayOf<String?>(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
+            }
+        }
+    }
+
+    //카메라 권한 설정
+    private fun initNextButton(){
+        binding.nextButton.setOnClickListener{
+            if(page_num == 6 || page_num == 10){
+                val intent = Intent(this, StretchingEnd::class.java)
+                finish()
+                startActivity(intent)
+            }
+            else{
+                binding.nextButton.isVisible = false
+                binding.stretchingDes.text = page_num_check(page_num)
+                page_num++
+
+                Timer().schedule(5000) {
+                    runOnUiThread {
+                        binding.nextButton.isVisible = true
+                    }
+                }
+            }
+        }
     }
 
 }
