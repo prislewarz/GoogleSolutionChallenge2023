@@ -15,9 +15,7 @@ import android.widget.TimePicker
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
-import com.example.myapplication.AlertReceiver
-import com.example.myapplication.MainActivity
-import com.example.myapplication.NeckStretchingStart
+import com.example.myapplication.*
 import com.example.myapplication.databinding.FragmentNeckSetBinding
 import java.text.DateFormat
 import java.util.*
@@ -28,6 +26,8 @@ class NeckSetFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var mainActivity: MainActivity
     private var alertMessage: String = "null"
+    lateinit var neckPrefs : PreferenceUtil
+    private var calendar = Calendar.getInstance()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -39,8 +39,25 @@ class NeckSetFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         _binding = FragmentNeckSetBinding.inflate(inflater, container, false)
+        neckPrefs = PreferenceUtil(requireContext())
 
 
+        initButton()
+        applySavedData()
+        startNeckStreching()
+        initAlertMessage()
+        return binding.root
+    }
+    private fun applySavedData(){
+        alertMessage = neckPrefs.get("neckSetMessage", getString(R.string.necks_message))
+
+        calendar.set(Calendar.HOUR_OF_DAY, neckPrefs.get("neckHour", -1))
+        calendar.set(Calendar.MINUTE, neckPrefs.get("neckMinute", -1))
+        updateTimeText(calendar)
+
+    }
+
+    private fun initButton(){
         binding.setBtn.setOnClickListener{
             var time = Calendar.getInstance()
 
@@ -48,11 +65,13 @@ class NeckSetFragment : Fragment() {
             var minute = time.get(Calendar.MINUTE)
             var timeListener = object : TimePickerDialog.OnTimeSetListener{
                 override fun onTimeSet(timePicker: TimePicker?, hourOfDay: Int, minute: Int) {
-                    var calendar = Calendar.getInstance()
 
                     calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
                     calendar.set(Calendar.MINUTE, minute)
                     calendar.set(Calendar.SECOND, 0)
+
+                    neckPrefs.set("neckHour", hourOfDay)
+                    neckPrefs.set("neckMinute", minute)
 
                     updateTimeText(calendar)
 
@@ -62,16 +81,16 @@ class NeckSetFragment : Fragment() {
             var builder = TimePickerDialog(mainActivity,timeListener,hour,minute,false)
             builder.show()
         }
-
-        startNeckStreching()
-        initAlertMessage()
-        return binding.root
     }
 
-    private fun updateTimeText(calendar: Calendar) {
-        var curTime = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.time)
 
-        binding.hourText.text = curTime
+    private fun updateTimeText(calendar: Calendar) {
+        if(calendar.get(Calendar.HOUR_OF_DAY) != - 1 && calendar.get(Calendar.MINUTE) != -1){
+            var curTime = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.time)
+
+            binding.hourText.text = curTime
+        }
+
     }
 
     private fun startAlarm(calendar: Calendar){
@@ -111,11 +130,13 @@ class NeckSetFragment : Fragment() {
     private fun initAlertMessage() {
         val setButton: Button = binding.setMeesageButton
         val setMessage: EditText = binding.setMessage
+        setMessage.hint = alertMessage
+
 
         setButton.setOnClickListener {
             alertMessage = "${setMessage.text}"
             Toast.makeText(context, alertMessage, Toast.LENGTH_LONG).show()
-
+            neckPrefs.set("neckSetMessage", setMessage.text.toString())
         }
 
     }
