@@ -114,9 +114,8 @@ class NeckSetFragment : Fragment() {
 
         setButton.setOnClickListener {
             alertMessage = "${setMessage.text}"
-            Toast.makeText(context, alertMessage, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "적용", Toast.LENGTH_LONG).show()
+        }
+    }
 
         }
-
-    }
-}

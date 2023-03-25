@@ -1,4 +1,5 @@
 import android.Manifest
+import android.app.AlertDialog
 import android.content.Context.SENSOR_SERVICE
 import android.content.pm.PackageManager
 import android.hardware.Sensor
@@ -6,6 +7,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,12 +17,24 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
+import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentEyeSetBinding
 import com.example.myapplication.databinding.FragmentWalkingSetBinding
+import java.util.*
 
 class WalkingSetFragment : Fragment(), SensorEventListener {
     private var _binding: FragmentWalkingSetBinding? = null
     private val binding get() = _binding!!
+    private lateinit var tts: TextToSpeech
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.getDefault()
+            }
+        })
+    }
 
     private lateinit var sensorManager: SensorManager
     private lateinit var stepCountSensor: Sensor
@@ -58,6 +72,7 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
         val walkingSetButton: Button = binding.walkingTimeSetButton
         walkingSetButton.setOnClickListener {
             walkingCount = binding.npker.value
+            Toast.makeText(context, "적용", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -80,7 +95,19 @@ class WalkingSetFragment : Fragment(), SensorEventListener {
             if (event.values[0] == 1.0f) {
                 currentSteps++
                 if(currentSteps==walkingCount){
-                    Toast.makeText(context, "$walkingCount", Toast.LENGTH_LONG).show()
+                    val tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
+                        if (status == TextToSpeech.SUCCESS) {
+                            tts.language = Locale.getDefault()
+                            if(currentSteps==walkingCount){
+                                val builder = AlertDialog.Builder(context)
+                                builder.setMessage(getString(R.string.smb_message))
+                                builder.setPositiveButton("OK") { dialog, which -> }
+                                val dialog = builder.create()
+                                dialog.show()
+                                tts.speak(getString(R.string.smb_message), TextToSpeech.QUEUE_FLUSH, null, null)
+                            }
+                        }
+                    })
                 }
             }
         }
